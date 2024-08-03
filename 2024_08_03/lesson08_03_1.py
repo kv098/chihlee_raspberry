@@ -18,11 +18,6 @@ else:
 
 
 log_path = os.path.join(data_path,'iot.log')
-print(log_path)
-os.path.isfile(log_path)
-
-
-
 if not os.path.isfile(log_path):
     print('沒有iot.log檔，建立新檔')
     with open(log_path,mode='w',encoding='utf-8',newline='') as file:
@@ -31,15 +26,9 @@ else:
     print("已經有log檔")
 
 
-with open(log_path, mode='a', encoding='utf-8', newline='') as file:
-    file.write('2024-07-27 15:30:25,70.5,29.5\n')
-
 
 from datetime import datetime
-print(datetime.now())
 now = datetime.now()
-print(now.year,'-',now.month, '-', now.day, now.hour,':', now.minute,':', now.second)
-print(now.strftime('%Y-%m-%d %H:%M:%S'))
 now_str = now.strftime('%Y-%m-%d %H:%M:%S')
 
 import random
