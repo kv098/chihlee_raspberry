@@ -2,3 +2,4 @@ redis
 Rpi.GPIO
 lgpio
 gpiozero
+paho-mqtt
